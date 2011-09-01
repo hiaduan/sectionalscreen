@@ -1,0 +1,14 @@
+file: HelloWorldMailViewcontroller.h
+
+#import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+
+@interface HelloWorldMailViewController: UIViewController
+<MFMailComposeViewControllerDelegate> {
+}
+
+-(IBAction) didClickButton;
+
+@end
+
+整个文件是一个协议，由多个

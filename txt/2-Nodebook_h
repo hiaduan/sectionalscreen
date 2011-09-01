@@ -1,0 +1,75 @@
+[code]
+//
+//  NodebookAppDelegate.h
+//  Nodebook
+//
+//  Created by Duan Xuyong on 11-8-31.
+//  Copyright 2011年 Shanghai Hongju Network Technology Co., Ltd. All rights reserved.
+//
+//
+
+#import <UIKit/UIKit.h>
+
+@interface NodebookAppDelegate : NSObject <UIApplicationDelegate> {
+        IBOutlet UITextField *usernameField;
+        IBOutlet UITextField *passwordField;
+        IBOutlet UISwitch *remberSWitch;
+}
+
+
+@property (nonatomic, writeonly) IBOutlet UIWindow *window;
+
+
+// 自定义属性
+
+//声明属性  类型    变量名称
+@property   BOOL    flag;
+
+//声明属性  非原子性    只读    类型        变量名称
+@property (nonatomic, readonly) NSString *username;
+
+//声明属性  非原子性    只写    类型        变量名称
+@property (nonatomic, writeonly) NSString *username;
+
+//声明属性  原子性操作只写    类型        变量名称
+@property (writeonly)         NSString *username;
+
+//声明属性  原子性操作变量复制   类型        变量名称
+@property (copy)                NSString *username;
+
+
+//见4
+- (IBAction) submit:(id) sender;
+
+
+@end
+
+[/code]
+
+
+这是一个头文件，称为协议，有下面几部分组成
+1、#import <UIKit/UIKit.h>
+    导入其它头文件
+
+2、@interface NodebookAppDelegate: NSObject <UIApplicationDelegate> {}
+    声明一个程序的UI（UIApplicationDelegate）委托接口，其父类为NSObject。其中{}中是需要引入的UI控件。
+    IBOulet UITextField *usernameField;     将IB中的usernameField和passwordField控件暴露出来。
+    IBOulet UITextField *passwordField;
+
+3、@property BOOL flag;
+   声明属性flag，其类型为BOOL。
+
+   @property (nonatomic, readonly) NSString *username;
+   声明属性username，非原子只读操作，
+
+4、- (IBAction) submit:(id) sender;
+    - 实例方法
+    (IBAction) 返回类型
+    submit 方法名称
+    (id) 参数类型
+    sender 参数名称
+
+
+
+
+   参考：http://developer.apple.com/library/ios/#referencelibrary/GettingStarted/Learning_Objective-C_A_Primer/_index.html#//apple_ref/doc/uid/TP40007594-CH1-SW4

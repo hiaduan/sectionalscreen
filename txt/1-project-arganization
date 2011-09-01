@@ -1,0 +1,17 @@
+这是关于xcoder项目结构的文章。
+
+通过xcode创建项目后，会在项目目录中生成以下文件：
+1, GitTest
+2, GitTestTests
+3, Frameworks
+4, Products
+
+其中，GitTest目录中有GitTestAppDelegate.h、GitTestAppDelegate.m、MainWindow.xib与Supporting Files目录。
+    GitTestAppDelegate.h是一个协议文件，GitTestAppDelegate.m是协议文件的实现文件。
+    MainWindows.xib是整个应用的界面文件（inter building）。
+    Supporting Files目录中有
+        GitTest-Info.plist、infoPlist.strings、Gittest-Prefix.pch和main.m文件。
+        GitTest-Info.plist是一个xml文件记录了项目的一些属性。比如说应用的图标，版本号等等。
+        infoPlist.strings，看文件内容像是一个本地版本号的地方。
+
+
