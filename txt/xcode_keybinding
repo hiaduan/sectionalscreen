@@ -1,0 +1,22 @@
+windows与mac键盘的键对应
+    windows键位     mac键位
+    alt             command
+    微软徽标        Option
+
+
+
+Xcode
+    Command + R 运行程序，并且不在断点处停止
+    Commond + Y 运行程序，但在断点处等候
+
+    Command + I 断点调试时进入到函数断点处
+    Commond + O 跳过断点处的函数，并执行一下条语句
+    Command + T 类似于上一个快捷键
+
+Terminal
+    Command + t 创建新的Tab标签
+                往前切换标签
+                往后切换标签
+    Command + w 关闭当前标签
+
+
